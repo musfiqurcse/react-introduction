@@ -6,7 +6,7 @@ var path = require('path');
 module.exports = {
   context: path.join(__dirname),
   devtool: debug ? "inline-sourcemap" : false,
-  entry: "./assets/js/first_script.js",
+  entry: "./assets/js/source_js.js",
   module: {
     loaders: [
       {
