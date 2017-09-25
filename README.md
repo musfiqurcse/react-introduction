@@ -11,5 +11,8 @@ React Learning with Pace
 `npm install -S babel-cli babel-loader babel-preset-env --save-dev`
 
 
+# Component Never render multiple parent elements.
+
+
 
 

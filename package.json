@@ -30,6 +30,6 @@
   },
   "devDependencies": {},
   "scripts":{
-    "dev": "webpack-dev-server --content-base assets --inline -hot" 
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base assets --inline -hot" 
   }
 }
