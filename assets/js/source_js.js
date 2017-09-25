@@ -1,3 +1,6 @@
+require('./first_script.js')
+require('./second_script.js')
+
 function testVar(){
     var a=50 
     if(true){
@@ -173,8 +176,20 @@ function getData(method,url){
 }
 
 getData('GET','http://jsonplaceholder.typicode.com/todos').then((data) => {
-    console.table(data)
+    // console.table(data)
+    let todos = JSON.parse(data)
+    let output = ''
+    for(let todo of todos){
+        output +=`
+        <div>
+        <h3>${todo.title}</h3>
+        <p>Completed: ${todo.completed}</p>
+        </div>
+        `
+    }
+    document.getElementById('template').innerHTML = output
     console.log('testing')
 }).catch(function(err){
   console.log(err)  
 });
+
