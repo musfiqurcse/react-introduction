@@ -7,7 +7,7 @@ export default class Layout extends React.Component{
         super()
         this.name = "will"
         this.state={
-            title: "Welcome1 0 1",
+            title: "Welcome 1 0 1",
         }
         this.seconds=0
     }
@@ -16,11 +16,22 @@ export default class Layout extends React.Component{
         this.setState({title})
     }
 
+
     render(){
         setTimeout(()=>{
             this.seconds+=5
             this.setState({title: `Welcome after ${this.seconds} seconds `})
         },5000)
+        var waterel={
+            item: 'water',
+            freezing: 10,
+            boiling: 212
+        }
+        var ethanol ={
+            item: 'ethanol',
+            freezing: 32,
+            boiling: 500
+        }
         const title = "Welcome title"
         return (
             <div>
@@ -28,7 +39,8 @@ export default class Layout extends React.Component{
             <br />
             <h1> It Works!Testing Webpack in Local {this.state.title}</h1>
                 <section>
-                    <Header changeTitle={this.changeTitle.bind(this)} name={"some thing else"} title={this.state.title}/>
+                    <Header config={this.ethanol} changeTitle={this.changeTitle.bind(this)} name={"some thing else"} title={this.state.title}/>
+                    <Header config={this.ethanol} changeTitle={this.changeTitle.bind(this)} name={"some thing else declare"} title={this.state.title}/>
                 </section>
             </div>
         );
