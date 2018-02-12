@@ -10,6 +10,17 @@ export default class Layout extends React.Component{
             title: "Welcome 1 0 1",
         }
         this.seconds=0
+        this.waterel = {
+            item: 'water',
+            freezing: 10,
+            boiling: 212
+        }
+        this.ethanol = {
+            item: 'ethanol',
+            freezing: 32,
+            boiling: 500
+        }
+        this.title = "Welcome title"
     }
 
     changeTitle(title){
@@ -22,6 +33,7 @@ export default class Layout extends React.Component{
             this.seconds+=5
             this.setState({title: `Welcome after ${this.seconds} seconds `})
         },5000)
+        /*
         var waterel={
             item: 'water',
             freezing: 10,
@@ -33,6 +45,7 @@ export default class Layout extends React.Component{
             boiling: 500
         }
         const title = "Welcome title"
+        */
         return (
             <div>
             <h1> It Works!Testing Webpack in Local Machine</h1>
